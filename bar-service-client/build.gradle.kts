@@ -55,7 +55,7 @@ protobuf {
     }
 }
 
-tasks.register<JavaExec>("BarClient") {
+tasks.register<JavaExec>("start") {
     dependsOn("classes")
     classpath = sourceSets["main"].runtimeClasspath
     mainClass.set("com.hypto.hws.services.starter.BarClientKt")

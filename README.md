@@ -71,7 +71,7 @@ The starter sources are organized into the following top-level folders:
   Run the client which will make requests to the server using 50051 port:
 
   ```sh
-  ./gradlew bar-service-client:BarClient
+  ./gradlew bar-service-client:start
   ```
 
 [grpc.io Kotlin/JVM]: https://grpc.io/docs/languages/kotlin/
