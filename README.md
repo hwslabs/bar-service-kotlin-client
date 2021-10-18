@@ -1,4 +1,4 @@
-# gRPC Kotlin starter
+# Bar Service Kotlin Client
 
 ![](logo/hypto_grpc_kotlin.png)
 
