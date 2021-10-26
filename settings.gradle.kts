@@ -1,6 +1,6 @@
 rootProject.name = "bar-service-kotlin-client"
 
-include("bar-service-models", "bar-service-client")
+include("bar-service-models", "starter-service-client")
 
 pluginManagement {
     repositories {
