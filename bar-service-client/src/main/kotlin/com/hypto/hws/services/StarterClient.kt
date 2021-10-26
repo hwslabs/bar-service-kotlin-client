@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package com.hypto.hws.services.starter
+package com.hypto.hws.services
 
-import com.hypto.hws.services.starter.BarGrpcKt.BarCoroutineStub
+import com.hypto.hws.services.StarterGrpcKt.StarterCoroutineStub
 import io.grpc.ManagedChannel
 import io.grpc.ManagedChannelBuilder
 import java.io.Closeable
 import java.util.concurrent.TimeUnit
 
-class BarClient(private val channel: ManagedChannel) : Closeable {
-    private val stub: BarCoroutineStub = BarCoroutineStub(channel)
+class StarterClient(private val channel: ManagedChannel) : Closeable {
+    private val stub: StarterCoroutineStub = StarterCoroutineStub(channel)
 
     suspend fun printText(text: String): String {
         val request = InputRequest.newBuilder()
@@ -46,7 +46,7 @@ class BarClient(private val channel: ManagedChannel) : Closeable {
 suspend fun main() {
     val port = 50051
     val channel = ManagedChannelBuilder.forAddress("localhost", port).usePlaintext().build()
-    val client = BarClient(channel)
+    val client = StarterClient(channel)
 
     val responseText = client.printText("Hello World!")
     println("Output Response: $responseText")
