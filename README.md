@@ -4,7 +4,7 @@
 
 ## Overview
 
-This directory contains a simple bar service client written in Kotlin against generated models (protos)  
+This directory contains a simple starter service client written in Kotlin against generated models (protos)  
 You can find detailed instructions for running the client below
 
 - **Bar Service Client** using gRPC and Kotlin. For details, see the [project on github](https://github.com/hwslabs/bar-service-kotlin-client).
@@ -13,9 +13,8 @@ You can find detailed instructions for running the client below
 
 The starter sources are organized into the following top-level folders:
 
-- [bar-service-models](bar-service-models): `.proto` files for generating the stubs
-- [bar-service-kotlin-stubs](bar-service-kotlin-stubs): regular Java & Kotlin stub artifacts from [protos][]
-- [bar-service-client](bar-service-client): Kotlin clients based on regular [stub](bar-service-kotlin-stubs) artifacts
+- [starter-service-models](starter-service-models): `.proto` files for generating the stubs
+- [starter-service-client](starter-service-client): Kotlin clients based on regular stub artifacts
 
 ## Set up and run the client on macOS
 
@@ -71,7 +70,7 @@ The starter sources are organized into the following top-level folders:
   Run the client which will make requests to the server using 50051 port:
 
   ```sh
-  ./gradlew bar-service-client:start
+  ./gradlew starter-service-client:start
   ```
 
 [grpc.io Kotlin/JVM]: https://grpc.io/docs/languages/kotlin/
