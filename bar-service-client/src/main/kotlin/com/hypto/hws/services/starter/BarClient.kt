@@ -69,8 +69,11 @@ class BarClient(private val channel: ManagedChannel) : Closeable {
  */
 suspend fun main() {
     val port = 50051
+    val address = "hws.bar.hypto.co.in"
 
-    val channel = ManagedChannelBuilder.forAddress("localhost", port).usePlaintext().build()
+    val channel = ManagedChannelBuilder
+        .forAddress(address, port)
+        .build()
 
     val client = BarClient(channel)
     
