@@ -45,7 +45,8 @@ class {TEMPLATE_SERVICE_NAME}Client(private val channel: ManagedChannel) : Close
  */
 suspend fun main() {
     val port = 50051
-    val channel = ManagedChannelBuilder.forAddress("localhost", port).usePlaintext().build()
+    val address = "hws.bar.hypto.co.in"
+    val channel = ManagedChannelBuilder.forAddress(address, port).build()
     val client = {TEMPLATE_SERVICE_NAME}Client(channel)
 
     val responseText = client.printText("Hello World!")
