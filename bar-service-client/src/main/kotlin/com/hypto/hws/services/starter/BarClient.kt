@@ -69,6 +69,7 @@ class BarClient(private val channel: ManagedChannel) : Closeable {
  */
 suspend fun main() {
     val port = 50051
+    //TODO: Fix this hardcode
     val address = "hws.bar.hypto.co.in"
 
     val channel = ManagedChannelBuilder
