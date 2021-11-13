@@ -73,6 +73,7 @@ suspend fun main() {
 
     val channel = ManagedChannelBuilder
         .forAddress(address, port)
+        .usePlaintext()
         .build()
 
     val client = BarClient(channel)
@@ -114,7 +115,7 @@ suspend fun main() {
         .setOrderAmount(100)
         .build()
     client.payBill(dummyBill, wallet)
-    delay(2000)
+    delay(20000)
 
     println("Final wallet balance is: $wallet")
 }
