@@ -45,7 +45,7 @@ class {TEMPLATE_SERVICE_NAME}Client(private val channel: ManagedChannel) : Close
  */
 suspend fun main() {
     val port = 50051
-    val address = "hws.{TEMPLATE_SERVICE_HYPHEN_NAME}.hypto.co.in"
+    val address = "{TEMPLATE_SERVICE_HYPHEN_NAME}.{TEMPLATE_AWS_ZONE_NAME}"
     val channel = ManagedChannelBuilder.forAddress(address, port).build()
     val client = {TEMPLATE_SERVICE_NAME}Client(channel)
 
